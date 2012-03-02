@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  description: MyText
+  date_add: 2012-03-01 20:19:20
+  hours: 9.99
+  proyect: 
+  is_billable: false
+
+two:
+  description: MyText
+  date_add: 2012-03-01 20:19:20
+  hours: 9.99
+  proyect: 
+  is_billable: false
