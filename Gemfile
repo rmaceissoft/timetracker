@@ -50,3 +50,7 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem "devise"
 
 gem 'formtastic'
+
+# introduces a few methods to your migrations for adding and removing foreign key constraints.
+# It also dumps foreign keys to schema.rb.
+gem "foreigner"
