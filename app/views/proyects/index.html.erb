@@ -1,0 +1,27 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<div>
+  <ul>
+    <li><%= link_to "New", new_proyect_path %></li>
+  </ul>
+</div>
+
+<table border="0">
+  <tr>
+    <th>Title</th>
+    <th>Created at</th>
+    <th></th>
+  </tr>
+  <% for proyect in @proyects %>
+  <tr>
+    <td><%= proyect.title %></td>
+    <td><%= proyect.created_at %></td>
+    <td><%= link_to "edit", edit_proyect_path(proyect) %> </td>
+  </tr>
+  <% end %>
+
+</table>
+
