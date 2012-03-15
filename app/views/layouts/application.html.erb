@@ -3,7 +3,7 @@
 <head>
   <title>Timetracker</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= stylesheet_link_tag    "formtastic" %>
+  <%= stylesheet_link_tag    "formtastic", "simple-navigation" %>
   <!--[if IE 6]><%= stylesheet_link_tag 'formtastic_ie6' %><![endif]-->
   <!--[if IE 7]><%= stylesheet_link_tag 'formtastic_ie7' %><![endif]-->
   <%= javascript_include_tag "application" %>
@@ -19,6 +19,9 @@
       <li><%= link_to "Login", new_user_session_path %></li>
       <% end %>
     </ul>
+  </div>
+  <div id="main_navigation">
+    <%= render_navigation %>
   </div>
 <%= yield %>
 

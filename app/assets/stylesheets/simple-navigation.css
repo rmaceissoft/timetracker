@@ -1,0 +1,119 @@
+/* menu styles */
+
+
+#main_navigation ul {
+    height: 38px;
+    z-index: 9999;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F4F4;
+}
+
+
+#main_navigation ul li {
+    float: left;
+    position: relative;
+    list-style: none;
+
+}
+
+#main_navigation ul li a {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 9px 15px;
+    border-right: 1px solid #ededed;
+    color: #777;
+    white-space: nowrap;
+}
+
+#main_navigation ul li.disabled a {
+    color: #bbb;
+    cursor: default;
+}
+
+#main_navigation ul li.first a {
+    margin: 5px 0 0 12px;
+    padding-top: 4px;
+    text-indent: 14px;
+}
+
+#main_navigation ul li:hover,
+#main_navigation ul li.over,
+#main_navigation ul li.selected {
+    background: #515151;
+}
+
+#main_navigation ul li:hover a,
+#main_navigation ul li.over a,
+#main_navigation ul li.selected a{
+    color: #eee;
+}
+
+
+#main_navigation ul li ul {
+    display: none;
+    position: absolute;
+    top: auto;
+    left: auto;
+    margin-left: -1px;
+    margin-top: -1px;
+}
+
+#main_navigation ul li ul li {
+    padding: 0;
+    float: none;
+    background: none;
+    z-index: 9999;
+}
+
+#main_navigation ul li ul li a {
+    display: block;
+    border: 1px solid #ededed;
+    border-width: 0 1px 1px 1px;
+    text-transform: none;
+    min-width: 180px;
+}
+
+#main_navigation ul li ul li ul {
+    left: 100%;
+    top: 0;
+    border-top: 1px solid #ededed;
+}
+
+#main_navigation ul li ul li ul li a {
+    white-space: nowrap;
+}
+
+#main_navigation ul li:hover ul li ul,
+#main_navigation ul li.over ul li ul {
+    display: none;
+}
+
+#main_navigation ul li:hover ul,
+#main_navigation ul li.over ul,
+#main_navigation ul li ul li:hover ul,
+#main_navigation ul li ul li.over ul {
+    display: block;
+}
+
+#main_navigation ul li:hover ul li,
+#main_navigation ul li.over ul li,
+#main_navigation ul li ul li:hover ul li,
+#main_navigation ul li ul li.over ul li {
+    background: transparent url(../images/admin-tools.png) repeat-x 0 -285px;
+}
+
+#main_navigation ul li ul li:hover,
+#main_navigation ul li ul li.over,
+#main_navigation ul li ul li ul li:hover,
+#main_navigation ul li ul li ul li.over {
+    background: transparent url(../images/admin-tools.png) repeat-x 0 -245px;
+}
+
+#main_navigation ul li.disabled a:hover,
+#main_navigation ul li.disabled a.over {
+    background: none;
+}
+
