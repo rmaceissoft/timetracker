@@ -82,4 +82,9 @@ RailsAdmin.config do |config|
     redirect_to new_user_session_path unless current_user.try(:admin?)
   end
 
+  # Use a specific role for ActiveModel's :attr_acessible :attr_protected
+  # Default is :default
+  # current_user is accessible in the block if you want to make it user specific.
+  config.attr_accessible_role { :admin }
+
 end
