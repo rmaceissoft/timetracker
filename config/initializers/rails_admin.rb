@@ -78,6 +78,8 @@ RailsAdmin.config do |config|
   # Your model's configuration, to help you get started:
 
   # All fields marked as 'hidden' won't be shown anywhere in the rails_admin unless you mark them as visible. (visible(true))
-
+  config.authorize_with do
+    redirect_to new_user_session_path unless current_user.try(:admin?)
+  end
 
 end
