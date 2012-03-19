@@ -87,4 +87,27 @@ RailsAdmin.config do |config|
   # current_user is accessible in the block if you want to make it user specific.
   config.attr_accessible_role { :admin }
 
+
+  # config action for admin
+  config.actions do
+    # root actions
+    dashboard do                     # mandatory
+      i18n_key :dash
+    end
+    # collection actions
+    index                         # mandatory
+    new
+    export
+    history_index
+    bulk_delete
+    # confirm_users
+    # member actions
+    show
+    edit
+    delete
+    history_show
+    show_in_app
+  end
+
+  
 end
