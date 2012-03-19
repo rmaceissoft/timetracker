@@ -1,0 +1,24 @@
+<div>
+  <ul>
+    <li><%= link_to "New", new_task_path %></li>
+  </ul>
+</div>
+
+<table border="0">
+  <tr>
+    <th>Description</th>
+    <th>Hours</th>
+    <th>Created at</th>
+    <th></th>
+  </tr>
+  <% for task in @tasks %>
+  <tr>
+    <td><%= task.description %></td>
+    <td><%= task.hours %></td>
+    <td><%= task.created_at %></td>
+    <td><%= link_to "edit", edit_task_path(task) %> </td>
+  </tr>
+  <% end %>
+
+</table>
+
