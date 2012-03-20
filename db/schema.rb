@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120320005350) do
+ActiveRecord::Schema.define(:version => 20120320170915) do
 
   create_table "invoice_cycles", :force => true do |t|
     t.string   "cycle"
@@ -52,8 +52,10 @@ ActiveRecord::Schema.define(:version => 20120320005350) do
     t.boolean  "is_billable"
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
+    t.integer  "creator_id"
   end
 
+  add_index "tasks", ["creator_id"], :name => "index_tasks_on_creator_id"
   add_index "tasks", ["proyect_id"], :name => "index_tasks_on_proyect_id"
 
   create_table "users", :force => true do |t|

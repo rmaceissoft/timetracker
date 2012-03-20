@@ -1,6 +1,9 @@
 class TasksController < ApplicationController
+
+  before_filter :authenticate_user!
+
   def index
-    @tasks = Task.all
+    @tasks = current_user.tasks
   end
 
   def new
@@ -8,7 +11,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(params[:task])
+    @task = current_user.tasks.build(params[:task])
     if @task.save
       redirect_to tasks_path
     else
