@@ -1,4 +1,7 @@
 class ProyectPositionsController < ApplicationController
+
+  before_filter :authenticate_user!
+
   def index
     @proyect_positions = ProyectPosition.all
   end

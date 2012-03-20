@@ -1,4 +1,7 @@
 class ProyectStatusesController < ApplicationController
+  
+  before_filter :authenticate_user!
+
   def index
     @proyect_statuses = ProyectStatus.all
   end
