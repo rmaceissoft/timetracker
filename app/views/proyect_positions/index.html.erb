@@ -1,0 +1,21 @@
+<div>
+  <ul>
+    <li><%= link_to "New", new_proyect_position_path %></li>
+  </ul>
+</div>
+
+<table border="0">
+  <tr>
+    <th>Title</th>
+    <th>Created at</th>
+    <th></th>
+  </tr>
+  <% @proyect_positions.each do |proyect_position| %>
+  <tr>
+    <td><%= proyect_position.name %></td>
+    <td><%= proyect_position.created_at %></td>
+    <td><%= link_to "edit", edit_proyect_position_path(proyect_position) %></td>
+  </tr>
+  <% end %>
+
+</table>

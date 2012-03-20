@@ -20,6 +20,8 @@ Timetracker::Application.routes.draw do
   resources :proyects
 
   resources :tasks
+
+  resources :proyect_positions
   # Sample resource route with options:
   #   resources :products do
   #     member do

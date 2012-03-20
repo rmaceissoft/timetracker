@@ -1,0 +1,2 @@
+module ProyectPositionsHelper
+end
