@@ -1,7 +1,9 @@
 class ProyectsController < ApplicationController
+
+  before_filter :authenticate_user!
 	
 	def index
-		@proyects = Proyect.all
+		@proyects = current_user.proyects
 	end
 
 
@@ -11,7 +13,7 @@ class ProyectsController < ApplicationController
 
   
   def create
-    @proyect = Proyect.new params[:proyect]
+    @proyect = current_user.proyects.build params[:proyect]
     if @proyect.save
       redirect_to proyects_path
     else
