@@ -2,6 +2,8 @@ class ProyectPosition < ActiveRecord::Base
   # class constants
 
   # active record associations
+  has_and_belongs_to_many :users
+
 
 
   # valudation rules

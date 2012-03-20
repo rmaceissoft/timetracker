@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   # active record associations
   has_many :proyects, :foreign_key => "creator_id"
   has_many :tasks, :foreign_key => "creator_id"
+  has_and_belongs_to_many :proyect_positions
 
   # validation rules
 

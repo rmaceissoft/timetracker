@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120320220123) do
+ActiveRecord::Schema.define(:version => 20120320223951) do
 
   create_table "invoice_cycles", :force => true do |t|
     t.string   "cycle"
@@ -25,6 +25,11 @@ ActiveRecord::Schema.define(:version => 20120320220123) do
     t.boolean  "active"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "proyect_positions_users", :id => false, :force => true do |t|
+    t.integer "proyect_position_id"
+    t.integer "user_id"
   end
 
   create_table "proyect_statuses", :force => true do |t|
