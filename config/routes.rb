@@ -22,6 +22,8 @@ Timetracker::Application.routes.draw do
   resources :tasks
 
   resources :proyect_positions
+
+  resources :proyect_statuses
   # Sample resource route with options:
   #   resources :products do
   #     member do

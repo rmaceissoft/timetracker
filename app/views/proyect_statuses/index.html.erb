@@ -1,0 +1,21 @@
+<div>
+  <ul>
+    <li><%= link_to "New", new_proyect_status_path %></li>
+  </ul>
+</div>
+
+<table border="0">
+  <tr>
+    <th>Title</th>
+    <th>Created at</th>
+    <th></th>
+  </tr>
+  <% @proyect_statuses.each do |proyect_status| %>
+  <tr>
+    <td><%= proyect_status.name %></td>
+    <td><%= proyect_status.created_at %></td>
+    <td><%= link_to "edit", edit_proyect_status_path(proyect_status) %></td>
+  </tr>
+  <% end %>
+
+</table>
