@@ -12,12 +12,14 @@
 <table border="0">
   <tr>
     <th>Title</th>
+    <th>Status</th>
     <th>Created at</th>
     <th></th>
   </tr>
   <% for proyect in @proyects %>
   <tr>
     <td><%= proyect.title %></td>
+    <td><%= proyect.status.name %></td>
     <td><%= proyect.created_at %></td>
     <td><%= link_to "edit", edit_proyect_path(proyect) %> </td>
   </tr>

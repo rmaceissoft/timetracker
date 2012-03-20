@@ -2,6 +2,7 @@ class ProyectStatus < ActiveRecord::Base
   # class constants
 
   # active record associations
+  has_many :proyects, :foreign_key => "status_id"
 
 
   # valudation rules

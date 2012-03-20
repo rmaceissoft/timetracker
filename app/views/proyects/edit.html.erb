@@ -4,6 +4,12 @@
 %>
 
 <%= semantic_form_for @proyect do |f| %>
-  <%= f.inputs :title, :description %>
+  <%= f.inputs do %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :invoice_cycle, :include_blank => "Select invoice cycle" %>
+    <%= f.input :status, :include_blank => false %>
+  <% end %>
   <%= f.actions %>
 <% end %>
+
