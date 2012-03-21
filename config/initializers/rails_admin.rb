@@ -74,6 +74,11 @@ RailsAdmin.config do |config|
   #     # Here goes the fields configuration for the list view
   #   end
   # end
+  config.model ProyectPosition do
+    edit do
+      include_fields :name, :description, :active
+    end
+  end
 
   # Your model's configuration, to help you get started:
 
