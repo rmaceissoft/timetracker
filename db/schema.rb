@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120321004337) do
+ActiveRecord::Schema.define(:version => 20120321231908) do
 
   create_table "invoice_cycles", :force => true do |t|
     t.string   "cycle"
@@ -53,11 +53,12 @@ ActiveRecord::Schema.define(:version => 20120321004337) do
   create_table "proyects", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
     t.integer  "invoice_cycle_id"
     t.integer  "creator_id"
     t.integer  "status_id"
+    t.boolean  "active",           :default => true
   end
 
   add_index "proyects", ["creator_id"], :name => "index_proyects_on_creator_id"

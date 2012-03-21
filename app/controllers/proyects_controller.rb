@@ -3,7 +3,7 @@ class ProyectsController < ApplicationController
   before_filter :authenticate_user!
 	
 	def index
-		@proyects = current_user.proyects
+		@proyects = Proyect.all
 	end
 
 
