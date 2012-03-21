@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120320223951) do
+ActiveRecord::Schema.define(:version => 20120321004337) do
 
   create_table "invoice_cycles", :force => true do |t|
     t.string   "cycle"
@@ -38,6 +38,16 @@ ActiveRecord::Schema.define(:version => 20120320223951) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.text     "description"
+  end
+
+  create_table "proyect_users", :force => true do |t|
+    t.integer  "proyect_id"
+    t.integer  "user_id"
+    t.integer  "proyect_position_id"
+    t.decimal  "estimate_hours",      :precision => 8, :scale => 2
+    t.decimal  "rate",                :precision => 8, :scale => 2
+    t.datetime "created_at",                                        :null => false
+    t.datetime "updated_at",                                        :null => false
   end
 
   create_table "proyects", :force => true do |t|
