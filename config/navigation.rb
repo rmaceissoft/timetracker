@@ -51,6 +51,8 @@ SimpleNavigation::Configuration.run do |navigation|
     #
     primary.item :home, 'Home', home_path
 
+    primary.item :users, "Users", users_path, :if => Proc.new { user_signed_in? }
+
     primary.item :projects, "Projects", proyects_path, :if => Proc.new { user_signed_in? }
 
     primary.item :tasks, "Tasks", tasks_path, :if => Proc.new { user_signed_in? }

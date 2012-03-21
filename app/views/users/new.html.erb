@@ -1,0 +1,11 @@
+<h1>New User</h1>
+<%= semantic_form_for @user do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :email %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :password %>
+    <%= f.input :confirm_password %>
+  <% end %>
+  <%= f.actions %>
+<% end %>
