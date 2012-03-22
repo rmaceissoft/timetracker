@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   # security options
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :admin, :first_name, :last_name, :as => :admin
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :admin, :first_name, :last_name, :proyect_position_ids, :as => :admin
 
   # third party options
   # Include default devise modules. Others available are:
