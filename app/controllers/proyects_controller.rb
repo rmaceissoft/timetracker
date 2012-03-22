@@ -13,7 +13,7 @@ class ProyectsController < ApplicationController
 
   
   def create
-    @proyect = current_user.proyects.build params[:proyect]
+    @proyect = current_user.created_proyects.build params[:proyect]
     if @proyect.save
       redirect_to proyects_path
     else
