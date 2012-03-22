@@ -13,6 +13,7 @@
   <tr>
     <th>Title</th>
     <th>Status</th>
+    <th>Internal</th>
     <th>Active</th>
     <th>Created at</th>
     <th></th>
@@ -21,6 +22,7 @@
   <tr>
     <td><%= proyect.title %></td>
     <td><%= proyect.status.name %></td>
+    <td><%= proyect.internal ? "Yes" : "No" %></td>
     <td><%= proyect.active ? "Yes" : "No" %></td>
     <td><%= proyect.created_at %></td>
     <td><%= link_to "edit", edit_proyect_path(proyect) %> </td>
