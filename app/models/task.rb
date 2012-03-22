@@ -11,6 +11,7 @@ class Task < ActiveRecord::Base
 
   # valudation rules
   validates :hours, :inclusion => { :in => @@hours_options }
+  validates :proyect, :presence => true
 
   # helper methods
   # helper to get hours options
