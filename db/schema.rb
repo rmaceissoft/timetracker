@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120322222919) do
+ActiveRecord::Schema.define(:version => 20120322233722) do
 
   create_table "clients", :force => true do |t|
     t.string   "first_name"
@@ -86,9 +86,13 @@ ActiveRecord::Schema.define(:version => 20120322222919) do
     t.integer  "status_id"
     t.boolean  "active",           :default => true
     t.boolean  "internal",         :default => false
+    t.integer  "client_id"
+    t.integer  "end_customer_id"
   end
 
+  add_index "proyects", ["client_id"], :name => "index_proyects_on_client_id"
   add_index "proyects", ["creator_id"], :name => "index_proyects_on_creator_id"
+  add_index "proyects", ["end_customer_id"], :name => "index_proyects_on_end_customer_id"
   add_index "proyects", ["invoice_cycle_id"], :name => "index_proyects_on_invoice_cycle_id"
   add_index "proyects", ["status_id"], :name => "index_proyects_on_status_id"
 
