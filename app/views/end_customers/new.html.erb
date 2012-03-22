@@ -1,0 +1,13 @@
+<h1>New End Customer</h1>
+<%= semantic_form_for @end_customer do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :client %>
+    <%= f.input :initials %>
+    <%= f.input :company_name %>
+    <%= f.input :active %>
+  <% end %>
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :button %>
+    <%= f.action :cancel, :as => :link, :url => end_customers_path, :label => "Cancel" %>
+  <% end %>
+<% end %>

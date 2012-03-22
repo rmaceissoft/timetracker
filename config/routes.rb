@@ -22,12 +22,10 @@ Timetracker::Application.routes.draw do
   resources :tasks
 
   resources :proyect_positions
-
   resources :proyect_statuses
-
   resources :users
-
   resources :clients
+  resources :end_customers
   # Sample resource route with options:
   #   resources :products do
   #     member do

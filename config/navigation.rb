@@ -59,6 +59,7 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :proyect_positions, "Project Positions", proyect_positions_path, :if => Proc.new { user_signed_in? }
     primary.item :proyect_statuses, "Project Statuses", proyect_statuses_path, :if => Proc.new { user_signed_in? }
     primary.item :clients, "Clients", clients_path, :if => Proc.new { user_signed_in? }
+    primary.item :end_customers, "End Customers", end_customers_path, :if => Proc.new { user_signed_in? }
 
     # Add an item which has a sub navigation (same params, but with block)
     #primary.item :key_2, 'name', url, options do |sub_nav|
