@@ -1,0 +1,22 @@
+<h1>Edit Client</h1>
+
+<%= semantic_form_for @client do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :initials %>
+    <%= f.input :company_name %>
+    <%= f.input :email %>
+    <%= f.input :phone %>
+    <%= f.input :country, :as => :string %>
+    <%= f.input :state %>
+    <%= f.input :city %>
+    <%= f.input :zip_code %>
+    <%= f.input :address %>
+    <%= f.input :active %>
+  <% end %>
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :button %>
+    <%= f.action :cancel, :as => :link, :url => clients_path, :label => "Cancel" %>
+  <% end %>
+<% end %>
