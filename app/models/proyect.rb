@@ -13,4 +13,7 @@ class Proyect < ActiveRecord::Base
   validates :title, :presence => true
   validates :status, :presence => true
   validates :client, :presence => true
+
+  # scopes
+  scope :actived, where(:active => true)
 end
