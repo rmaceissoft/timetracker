@@ -6,5 +6,8 @@
     <%= f.input :is_billable %>
     <%= f.input :date_add %>
   <% end %>
-  <%= f.actions %>
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :button %>
+    <%= f.action :cancel, :as => :link, :url => tasks_path, :label => "Cancel" %>
+  <% end %>
 <% end %>

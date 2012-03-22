@@ -6,5 +6,8 @@
     <%= f.input :description %>
     <%= f.input :active %>
   <% end %>
-  <%= f.actions %>
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :button %>
+    <%= f.action :cancel, :as => :link, :url => proyect_statuses_path, :label => "Cancel" %>
+  <% end %>
 <% end %>

@@ -7,5 +7,8 @@
     <%= f.input :admin %>
     <%= f.input :proyect_positions, :as => :check_boxes %>
   <% end %>
-  <%= f.actions %>
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :button %>
+    <%= f.action :cancel, :as => :link, :url => users_path, :label => "Cancel" %>
+  <% end %>
 <% end %>
