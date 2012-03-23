@@ -8,6 +8,7 @@
   <tr>
     <th>Description</th>
     <th>Hours</th>
+    <th>Status</th>
     <th>Created at</th>
     <th></th>
   </tr>
@@ -15,6 +16,7 @@
   <tr>
     <td><%= task.description %></td>
     <td><%= task.hours %></td>
+    <td><%= task.get_status_display %></td>
     <td><%= task.created_at %></td>
     <td><%= link_to "edit", edit_task_path(task) %> </td>
   </tr>

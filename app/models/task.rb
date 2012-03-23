@@ -12,7 +12,7 @@ class Task < ActiveRecord::Base
 
   # valudation rules
   validates :hours, :inclusion => { :in => @@hours_options }
-  validates :proyect, :presence => true
+  validates :proyect, :status, :presence => true
 
   # callbacks
   after_initialize do |obj|
@@ -30,5 +30,11 @@ class Task < ActiveRecord::Base
 
   def self.get_statuses_options
     @@statuses_options.map  { |k, v| [k, v] }
+  end
+
+  # instance methods
+  # simulating django's get_FOO_display model instance method
+  def get_status_display
+    @@statuses_options[status]
   end
 end
