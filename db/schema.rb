@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120322233722) do
+ActiveRecord::Schema.define(:version => 20120323002137) do
 
   create_table "clients", :force => true do |t|
     t.string   "first_name"
@@ -112,16 +112,18 @@ ActiveRecord::Schema.define(:version => 20120322233722) do
   create_table "tasks", :force => true do |t|
     t.text     "description"
     t.datetime "date_add"
-    t.decimal  "hours",       :precision => 9, :scale => 2
+    t.decimal  "hours",                    :precision => 9, :scale => 2
     t.integer  "proyect_id"
     t.boolean  "is_billable"
-    t.datetime "created_at",                                :null => false
-    t.datetime "updated_at",                                :null => false
+    t.datetime "created_at",                                             :null => false
+    t.datetime "updated_at",                                             :null => false
     t.integer  "creator_id"
+    t.string   "status",      :limit => 2
   end
 
   add_index "tasks", ["creator_id"], :name => "index_tasks_on_creator_id"
   add_index "tasks", ["proyect_id"], :name => "index_tasks_on_proyect_id"
+  add_index "tasks", ["status"], :name => "index_tasks_on_status"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",    :null => false
